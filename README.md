@@ -1,2 +1,2 @@
-# login-system
-Sistema de login para o estudo de Flask.
+# Login System
+## Sistema de login baseado na biblioteca Flask do Python
