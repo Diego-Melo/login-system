@@ -7,6 +7,6 @@ def sair():
     # return 'oi'
     return Usuarios().sair()
 
-@app.route('/logar/')
+@app.route('/logar', methods=['POST'])
 def logar():
     return Usuarios().logar()

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 import pymongo
 app = Flask(__name__, template_folder='./templates')
-
+app.secret_key = b'wr\x01\xf4\x84U0\xec\x97\xbaA\xda\xd0^\x97\xab'
 client = pymongo.MongoClient('localhost',27017)
 db = client.login
 
