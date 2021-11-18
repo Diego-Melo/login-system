@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 from app import app 
 from user.models import Usuarios
 
-@app.route('/usuario/')
+@app.route('/sair/')
 def sair():
     # return 'oi'
     return Usuarios().sair()
@@ -10,3 +10,7 @@ def sair():
 @app.route('/logar', methods=['POST'])
 def logar():
     return Usuarios().logar()
+
+@app.route('/nao-logado')
+def naologado():
+    return render_template('naologado.html')

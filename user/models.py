@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, session
+from flask import Flask, jsonify, request, session, redirect, url_for
 from passlib.hash import pbkdf2_sha256
 from app import db
 import uuid
@@ -20,9 +20,11 @@ class Usuarios:
             'nome': request.form['nome']
         })
         if usuario and pbkdf2_sha256.verify(request.form['senha'], usuario['senha']):
-            return self.iniciar_sessao(usuario)
+            self.iniciar_sessao(usuario)
+            return redirect(url_for('dashboard'))
         else:
             return jsonify({'error':'Invalid login credentials'}), 401
     
     def sair(self):
-        return jsonify(self.usuario)
+        session.clear()
+        return redirect('/nao-logado')
