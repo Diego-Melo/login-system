@@ -2,9 +2,9 @@ from flask import Flask, render_template
 from app import app 
 from user.models import Usuarios
 
+# Rotas de usuário
 @app.route('/sair/')
 def sair():
-    # return 'oi'
     return Usuarios().sair()
 
 @app.route('/logar', methods=['POST'])

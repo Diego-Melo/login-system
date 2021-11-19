@@ -1,9 +1,11 @@
 {% extends "base.html" %}
-{% block title %}
-Não logado
-{% endblock %}
+{% block title %}Não logado{% endblock %}
 {% block content %}
-Usuário não logado <br>
-Clique no botão abaixo para ir para página de login <br>
-<a href="/">Login</a>
+<div class="page">
+    <div class="card center">
+        <h1>Usuário não logado!</h1>
+        <p>Clique no botão abaixo para ir para página de login</p>
+        <a href="/" class="botao botao-pequeno">Login</a>
+    </div>
+</div>
 {% endblock %}

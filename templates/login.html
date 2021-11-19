@@ -3,14 +3,12 @@
 {% block content %}
 <div class="page">
     <div class="card center">
-        <h1>Área de Login</h1>
+        <h1 class="texto-blue">Área de Login</h1>
         <form action="/logar" method="post">
             <input type="text" name="nome" placeholder="Nome de Usuário"> <br>
             <input type="password" name="senha" placeholder="Senha"> <br>
-            <input type="submit" value="Enviar">
-
+            <input class="botao botao-pequeno bg-blue" type="submit" value="Enviar">
         </form>
     </div>
 </div>
-
 {% endblock %}

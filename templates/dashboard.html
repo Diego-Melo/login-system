@@ -1,14 +1,12 @@
 {% extends "base.html" %}
-{% block title %}
-Dashboard
-{% endblock %}
+{% block title %}Dashboard{% endblock %}
 {% block content %}
-Dashboard <br>
-<a href="/estados/ricos">
-    Estados Ricos
-</a> <br>
-<a href="/estados/pobres">
-    Estados Pobres
-</a>
-
+<div class="page">
+    <div class="card center">
+        <h1>Dashboard</h1>
+        <a href="/estados/ricos" class="botao bg-green">Estados Ricos</a>
+        <a href="/estados/pobres" class="botao bg-green">Estados Pobres</a>
+        <a href="/sair" class="botao botao-pequeno bg-red">Sair</a>
+    </div>
+</div>
 {% endblock %}
