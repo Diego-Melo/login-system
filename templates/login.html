@@ -1,8 +1,16 @@
 {% extends "base.html" %}
-{% block title %}Página Home{% endblock %}
+{% block title %}Área de Login{% endblock %}
 {% block content %}
-<div class="container">
-    
+<div class="page">
+    <div class="card center">
+        <h1>Área de Login</h1>
+        <form action="/logar" method="post">
+            <input type="text" name="nome" placeholder="Nome de Usuário"> <br>
+            <input type="password" name="senha" placeholder="Senha"> <br>
+            <input type="submit" value="Enviar">
+
+        </form>
+    </div>
 </div>
 
 {% endblock %}
