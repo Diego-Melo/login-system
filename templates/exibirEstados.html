@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Estados{% endblock %}
+{% block content %}
+<div class="page">
+    <div class="card">
+        <textarea name="estados" cols="60" rows="11" disabled>{{dados_estados}}</textarea>
+        <a href="/dashboard" class="botao bg-red">Voltar</a>
+    </div>
+</div>
+{% endblock %}

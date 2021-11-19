@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import pandas as pd
 
 
@@ -24,8 +24,8 @@ class Estado:
     
     def listarPobres(self):
         ''' Lista os 5 estados mais pobres de acordo com o dataframe'''
-        return self.listar(True)
+        return render_template('exibirEstados.html', dados_estados = self.listar(True))
     
     def listarRicos(self):
         ''' Lista os 5 estados mais ricos de acordo com o dataframe'''
-        return self.listar(False)
+        return render_template('exibirEstados.html', dados_estados = self.listar(False))

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Área de Cadastro de Usuários{% endblock %}
+{% block content %}
+<div class="page">
+    <div class="card center">
+        <h1>Cadastrar Usuários</h1>
+        <form action="./cadastrar" method="POST">
+            <input type="text" name="nome" placeholder="Nome de Usuário" > <br>
+            <input type="password" name="senha" placeholder="Senha"> <br>
+            <input class="botao botao-pequeno bg-green" type="submit" value="Cadastrar">
+        </form>
+    </div>
+</div>
+{% endblock %}

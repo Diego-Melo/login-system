@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from app import app 
 from user.models import Usuarios
 
@@ -13,4 +13,15 @@ def logar():
 
 @app.route('/nao-logado')
 def naologado():
-    return render_template('naologado.html')
+    return render_template('naoLogado.html')
+
+# @app.route('/estados')
+# def estados():
+#     return render_template('exibirEstados.html')
+
+@app.route('/cadastrar', methods=['POST', 'GET'])
+def cadastrar():
+    if request.method == 'POST':
+        return Usuarios().cadastrar()
+    else:
+        return render_template('cadastrar.html')
