@@ -15,10 +15,6 @@ def logar():
 def naologado():
     return render_template('naoLogado.html')
 
-# @app.route('/estados')
-# def estados():
-#     return render_template('exibirEstados.html')
-
 @app.route('/cadastrar', methods=['POST', 'GET'])
 def cadastrar():
     if request.method == 'POST':
