@@ -32,6 +32,14 @@ def dashboard():
 def naoEncontrado(err):
     return render_template('erro404.html'), 404
 
+@app.errorhandler(409)
+def naoEncontrado(err):
+    return render_template('erro409.html'), 409
+
+@app.errorhandler(401)
+def naoEncontrado(err):
+    return render_template('erro401.html'), 401
+
 
 if (__name__ == "__main__"):
     app.run(host='0.0.0.0', port=80)
